@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+579 project report
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Team Members: Qian Dong
+Date: Dec 8, 2024
 
-In the project directory, you can run:
 
-### `npm start`
+Useful Links
+Deployed page:
+Demo:
+Codes: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Introduction
+The Degree Progress Tracker is a tool for students to monitor their academic progress toward graduation, providing features to track completed and remaining credits, course statuses, and prerequisite requirements. Rather than relying on manual methods or external documents, students can use this app to easily visualize their academic journey and stay organized. This user-friendly platform is designed to simplify academic planning by allowing students to update and access their information efficiently. It’s only for UMSI students in Big Data Analytics in this phase. 
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Achieved Features
+Course Status Indicators: Courses will display indicators that toggle between “not taken”, “enrolled”, “finished” and “waved” giving students a clear view of each course's current state.
+Data Persistence: Using local storage, the app can save the course progress, preserving data across sessions. A save button ensures data is backed up, while a reset button allows users to clear and update stored information.
+Prerequisites and Corequisites Management: Courses with prerequisites or corequisites will feature visual markers, helping students organize their schedules and meet all requirements in the proper sequence. An alert will be displayed on clicking save to remind users of unsatisfied requisites.
+Credits Calculation: Automatically tracks and calculates finished and enrolled credits, giving students an overview of their progress toward degree requirements.
+Course Group Status: Each course group dynamically updates its status based on the completion of courses, providing students with a summary view of their progress within specific course categories.
 
-### `npm run build`
+Struggles
+Combined Course Requirements: Managing the data structure and logic for courses with multiple prerequisites and corequisites proved challenging, requiring the development of a new component to handle these complex relationships.
+Alert Logic: Ensuring appropriate alerts for unmet prerequisites or corequisites was tricky, particularly in cases where multiple requirements were linked.
+Course Group Status Updating: The dynamic updating of course group statuses needs useEffect and clear logic
+Toggle Button: Implementing a responsive and accessible toggle button using Material-UI posed minor difficulties, particularly in maintaining visual consistency.
+Save Button: Ensuring the save button remained fixed and easily accessible during page scrolling required careful consideration of UI/UX principles.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Possible Future Improvements
+Elective Course Adder: Introduce a feature that allows students to add elective courses, making the system more flexible and comprehensive.
+Visual Indication for Unmet Requirements: Enhance user experience by changing the color of prerequisite and corequisite courses before triggering alerts, providing a subtle visual warning.
+Mobile Responsiveness: Optimize the interface for mobile devices to improve accessibility and usability on smaller screens.
