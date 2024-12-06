@@ -21,7 +21,7 @@ const CourseGroup = ({ name, desc, status, courses, setCourses }) => {
         <b style={{ flex: 3 }}>Status</b>
       </div>
       {courses.map((course, index) => {
-        if (typeof course.name === "string") {
+        if (typeof course.courses === "undefined") {
           return (
             <Course
               key={index}

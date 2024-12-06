@@ -3,9 +3,10 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
 const CourseComb = ({
   courses,
-  relations,
+  relation,
   status,
   setCourseStatus,
+  credit,
   prereq = [],
   coreq = [],
 }) => {
@@ -43,23 +44,23 @@ const CourseComb = ({
                 justifyContent: "center",
               }}
             >
-              {!!course.prereq.length && (
+              {!!prereq.length && (
                 <p style={{ color: "red", fontSize: 13, margin: 1 }}>
-                  <b>Prereq</b>: {course.prereq.join(", ")}
+                  <b>Prereq</b>: {prereq.join(", ")}
                 </p>
               )}
-              {!!course.prereq.length && !!course.coreq.length && (
+              {!!prereq.length && !!coreq.length && (
                 <b style={{ color: "red", fontSize: 13, margin: 1 }}>|</b>
               )}
-              {!!course.coreq.length && (
+              {!!coreq.length && (
                 <p style={{ color: "red", fontSize: 13, margin: 1 }}>
-                  <b>Coreq</b>: {course.coreq.join(", ")}
+                  <b>Coreq</b>: {coreq.join(", ")}
                 </p>
               )}
             </div>
             {index < courses.length - 1 && (
               <u style={{ textAlign: "center", margin: 2 }}>
-                {relations[index]}
+                {relation}
               </u>
             )}
           </div>
@@ -67,7 +68,7 @@ const CourseComb = ({
       </div>
       <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
         {courses.map((course, index) => (
-          <p key={index}>{course.credit}</p>
+          <p key={index}>{credit}</p>
         ))}
       </div>
       <ToggleButtonGroup

@@ -4,8 +4,6 @@ export const coreCourses = [
     desc: "Contextual Inquiry and Consulting Foundations",
     credit: 3,
     status: "Not Taken",
-    // prereq: ["SI 506"],
-    // coreq: ["SI 504"],
   },
   {
     name: "SI 506",
@@ -63,19 +61,16 @@ export const masteryPrerequisiteCourses = [
       {
         name: "SI 670",
         desc: "Applied Machine Learning",
-        credit: 3,
-        prereq: ["SI 506", "SI 507", "SI 544", "SI 618"],
-        coreq: ["SI 602"],
       },
       {
         name: "SI 671",
         desc: "Data Mining",
-        credit: 3,
-        prereq: ["SI 506", "SI 507", "SI 544", "SI 618"],
-        coreq: ["SI 602"],
       },
     ],
-    relations: ["OR"],
+    credit: 3,
+    prereq: ["SI 506", "SI 507", "SI 544", "SI 618"],
+    coreq: ["SI 602"],
+    relation: "OR",
     status: "Not Taken",
   },
 ];
@@ -111,20 +106,20 @@ export const selectiveCourses = [
     status: "Not Taken",
   },
   {
-    courses:[{
-    name: "SI 670",
-    desc: "Applied Machine Learning",
+    courses: [
+      {
+        name: "SI 670",
+        desc: "Applied Machine Learning",
+      },
+      {
+        name: "SI 671",
+        desc: "Data Mining",
+      },
+    ],
     credit: 3,
     prereq: ["SI 506", "SI 507", "SI 544", "SI 618"],
     coreq: ["SI 602"],
-    },
-    {name: "SI 671",
-    desc: "Data Mining",
-    credit: 3,
-    prereq: ["SI 506", "SI 507", "SI 544", "SI 618"],
-    coreq: ["SI 602"],
-    }],
-    relations: ['AND'],
+    relation: "AND",
     status: "Not Taken",
   },
 ];
